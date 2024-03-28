@@ -1,0 +1,26 @@
+table {
+    margin: 20px auto;
+    text-align: left;
+}
+
+td{
+    border: 1px solid;
+    padding: 6px;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Estilo para as linhas ímpares */
+table tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+table tbody tr:first-child {
+    background-color: rgba(0, 0, 0, 0.800);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+}

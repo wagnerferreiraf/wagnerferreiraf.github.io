@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Professor do IFRO Wagner Ferreira">
+    <meta name="author" content="Wagner da Silva Ferreira Filho">
+    <meta name="keywords" content="educação, programação">
+    <title>Prof. Wagner Ferreira</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/side-bar.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
+    <meta property="og:image" content="./img/icon.png">
+</head>
+
+<body>
+    <div class="sidebar" id="sidebar">
+        <nav>
+            <ul class="menu">
+                <li class="item-menu-topo"><a class="link-menu" href="index.html">Home</a></li>
+                <li class="item-menu-topo"><a class="link-menu" href="sobre.html">Sobre Mim</a></li>
+                <li class="item-menu-topo"><a class="link-menu" href="contato.html">Contato</a></li>
+                <li class="item-menu-topo subitem-toggle"><a class="link-menu" href="#">Front-end</a>
+                    <ul>
+                        <li class="item-menu-topo subitem-list"><a class="link-menu" href="slides.html">Slides</a></li>
+                        <li class="item-menu-topo subitem-list"><a class="link-menu" href="cores.html">Cores</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+    <div class="conteudo">
+
+        <header class="primeiro-container">
+            <h1>Prof. Wagner Ferreira</h1>
+        </header>
+
+        <main>
+            <div class="divs" id="container-foto-perfil">
+                <img class="foto-perfil" src="img/perfil.png" alt="Imagem de perfil">
+            </div>
+            <div class="divs cards">
+
+                <div class="card">
+                    <caption>
+                        <h2 class="subtitulo">Disciplinas Ministradas em 2024</h2>
+                    </caption>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Disciplina</th>
+                                <th>Turma</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span>Lógica de Programação</span></td>
+                                <td>1os anos</td>
+                            </tr>
+                            <tr>
+                                <td><span>Linguagem de Programação</span></td>
+                                <td>1os anos</td>
+                            </tr>
+                            <tr>
+                                <td><span>Front-end I</span></td>
+                                <td>2os anos</td>
+                            </tr>
+                            <tr>
+                                <td><span>Front-end II</span></td>
+                                <td>2os anos</td>
+                            </tr>
+                            <tr>
+                                <td><span>Fábrica de software I</span></td>
+                                <td>2os anos</td>
+                            </tr>
+                            <tr>
+                                <td><span>Fábrica de software II</span></td>
+                                <td>2os anos</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card card-navegacao">
+                    <h2 class="subtitulo">Projetos</h2>
+
+                    <div id="card-links">
+                        <nav id="projetos">
+                            <a class="links" href="atividades-2a.html">2º Ano A</a>
+                            <a class="links" href="atividades-2b.html">2º Ano B</a>
+                            <a class="links" href="trabalho-avaliativo.html">Avaliar</a>
+                            <!-- <a class="links"
+                                href="https://docs.google.com/spreadsheets/d/1sQI0fGEdmvHMJVBtg8HXZUX66SvQazzMyWQfaXifpDo/edit#gid=0"
+                                target="_blank">Editar Planilha</a> -->
+                        </nav>
+                    </div>
+                </div>
+                <div class="card card-navegacao"> 
+                    <h2 class="subtitulo">Material de estudo [Front-end]</h2>
+                    <div id="card-links">
+                        <nav id="botoes">
+                            <a class="links" href="slides.html">Slides</a>
+                            <a class="links" href="cores.html">Cores</a>
+                            <a class="links" href="https://developer.mozilla.org/pt-BR/docs/Web" target="_blank">MDN</a>
+                        </nav>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+
+        <footer>
+            <small>&copy;2024 all rights reserved</small>
+        </footer>
+
+    </div>
+
+    <script src="/js/scripts.js"></script>
+</body>
+
+</html>

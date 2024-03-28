@@ -1,0 +1,79 @@
+.foto-perfil {
+    width: 75%;
+}
+
+#container-foto-perfil img {
+    width: 200px;
+    height: auto;
+    box-shadow: 0 0 15px 4px black;
+    margin: 10px auto 0 auto;
+    /* background-color: rgba(41, 0, 245, 0.411); */
+    background-color: white;
+    border: 2px solid rgb(0, 66, 0);
+    border-radius: 10px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 380px;
+    padding: 5px;
+    text-align: center;
+    border: solid 2px black;
+    background-color: rgba(0, 0, 0, 0.507);
+    border-radius: 10px;
+    margin:5px;
+}
+
+.card-navegacao {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 5px 5px 20px 5px;
+}
+
+#card-links {
+    max-width: 380px;
+    padding: 0;
+    /* background-color: rgba(41, 0, 245, 0.411); */
+    border-radius: 10px;
+    margin: 0; 
+    display: flex;
+    justify-content: space-around;
+    align-content: first baseline;
+    flex-wrap: wrap;
+    padding: 5px 5px 20px 5px;
+}
+
+#projetos, #botoes {
+    display: flex;
+    justify-content: space-around;  
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+table {
+    margin: auto auto 10px auto;
+    text-align: left;
+}
+
+thead {
+    font-weight: bold;
+}
+
+th {
+    text-align: center;
+    padding: 6px;
+    background-color: rgb(226, 226, 226);
+    border: 1px solid;
+}
+
+td{
+    border: 1px solid;
+    padding: 6px;
+    background-color: #fff;
+}

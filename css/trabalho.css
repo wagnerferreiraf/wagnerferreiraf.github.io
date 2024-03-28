@@ -1,0 +1,15 @@
+
+.menu {
+    padding: 0;
+    list-style: none;
+
+}
+
+li {
+    list-style-position: inside;
+}
+
+ol {
+    padding: 0;
+    text-align: left;
+}

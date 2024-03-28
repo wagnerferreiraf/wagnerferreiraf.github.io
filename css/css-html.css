@@ -1,0 +1,44 @@
+body {
+    background: url("../img/fundo.jpg") no-repeat fixed;
+    background-size: cover;
+}
+.toggle-btn {
+    background-color: red;
+    color: #fff;
+}
+.primeiro-container {
+    background: none;
+}
+
+.item {
+    border: 2px solid rgba(0, 0, 0, 0.322);
+    margin-top: 5px;
+    padding: 2px    ;
+}
+
+dt {
+    font-weight: bold;
+    border: 2px solid;
+    width: fit-content;
+    margin: 5px auto;
+    padding: 3px 5px;
+    border-radius: 5px;
+}
+
+#imagem-topo {
+    width: 40px;
+    margin-top: 10px;
+    padding: 2px;
+    margin-top: 25px;
+}
+
+
+h1 {
+    width: min-content;
+    text-align: center;
+    border: 5px solid #999;
+    margin: 0 auto 10px auto;
+    padding: 10px;
+    border-radius: 15px 0;
+    background-color: white;
+}

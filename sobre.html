@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre mim</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/side-bar.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/sobre-contato.css">
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="sidebar" id="sidebar">
+        <nav>
+            <ul class="menu">
+                <li class="item-menu-topo"><a class="link-menu" href="index.html">Home</a></li>
+                <li class="item-menu-topo"><a class="link-menu" href="sobre.html">Sobre Mim</a></li>
+                <li class="item-menu-topo"><a cla'ss="link-menu" href="contato.html"> Contato</a></li>
+                <li class="subitem-toggle item-menu-topo"><a class="link-menu" href="#">Front-end</a>
+                    <ul>
+                        <li class="item-menu-topo subitem-list"><a class="link-menu" href="slides.html">Slides</a></li>
+                        <li class="item-menu-topo subitem-list"><a class="link-menu" href="cores.html">Cores</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+    <div class="conteudo">
+
+        <header>
+            <div class="primeiro-container">
+                <h1>Sobre mim</h1>
+            </div>
+        </header>
+
+        <main>
+            <div class="divs">
+                <h2>Atuação profissional</h2>
+                <div class="card-box-sobre">
+                    <p>Professor efetivo na área da computação do IFRO-Instituto Federal de Rondônia/<em>Campus</em> Vilhena
+                    </p>
+                    <div class="botoes">
+                        <a class="links" href="https://portal.ifro.edu.br/vilhena" target="_blank" rel="external">IFRO
+                            Campus
+                            Vilhena</a>
+                    </div>
+                </div>
+
+                <div id="frame">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62272.64224901916!2d-60.1587927021643!3d-12.710803109935942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93b96be3e6498bd7%3A0x66ce4f62185d43bb!2sInstituto%20Federal%20de%20Rond%C3%B4nia%20-%20Campus%20Vilhena!5e0!3m2!1spt-BR!2sbr!4v1707506417767!5m2!1spt-BR!2sbr"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+            </div>
+
+            <div class="divs" id="ultimo-container">
+                <h2>Currículo</h2>
+                <div class="card-box-sobre">
+                    <p>Disponível na plataforma Lattes</p>
+                    <nav class="botoes"><a class="links" href="https://lattes.cnpq.br/8387840879676874"
+                            target="_blank">LATTES</a>
+                    </nav>
+                </div>
+            </div>
+    </div>
+    </main>
+
+    <footer>
+        <small>&copy;2024 all rights reserved</small>
+    </footer>
+    </div>
+
+    <script src="/js/scripts.js"></script>
+
+</body>
+
+</html>

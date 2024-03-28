@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Slides</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/side-bar.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/slides.css">
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+</head>
+
+<body onload="adicionarOuvintes()">
+    <div class="sidebar" id="sidebar">
+        <nav>
+            <ul class="menu">
+                <li class="item-menu-topo"><a class="link-menu" href="index.html">Home</a></li>
+                <li class="item-menu-topo"><a class="link-menu" href="sobre.html">Sobre Mim</a></li>
+                <li class="item-menu-topo"><a class="link-menu" href="contato.html">Contato</a></li>
+                <li class="subitem-toggle item-menu-topo"><a class="link-menu" href="#">Front-end</a>
+                    <ul>
+                        <li class="item-menu-topo subitem-list"><a class="link-menu" href="slides.html">Slides</a></li>
+                        <li class="item-menu-topo subitem-list"><a class="link-menu" href="cores.html">Cores</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+    <div class="conteudo">
+
+        <header class=" primeiro-container">
+            <h1>Slides</h1>
+        </header>
+
+        <main class="conteudo">
+
+            <div class="container-listas-flex">
+                <div class="container-lista">
+                    <ol>
+                        <p>Conteúdo</p>
+                        <li><a class="item-lista-slide" href="#"
+                                onclick="alterarIframe('https://docs.google.com/presentation/d/e/2PACX-1vS_DGSGltGz07A0N9jzv60fWA3NEqcLZb4I0FHb81D3-MBd6cvlB4F5FDb4_FgfZA/embed?start=false&loop=false&delayms=3000')">Introdução</a>
+                        </li>
+                        <li><a class="item-lista-slide" href="#"
+                                onclick="alterarIframe('https://docs.google.com/presentation/d/e/2PACX-1vQ_utnWaCnM1qZaKcBdBoatP1HJwmhxHvl-2XvNr-z17QOfKIFd0JBboFfyL0DObFyLcUFqagqQAqSu/embed?start=true&loop=false&delayms=30000')">Estrutura
+                                de um Documento HTML</a></li>
+                        <li><a class="item-lista-slide" href="#"
+                                onclick="alterarIframe('https://docs.google.com/presentation/d/e/2PACX-1vQyiz5C0vAxu7K5kCvDOQC3Aw_Alm6IL51iJ8AUftrj3StWLzlrgjn5vR18qjgaWn4vuLe_m5egNvJS/embed?start=true&loop=false&delayms=30000')">Tags
+                                de Cabeçalho</a></li>
+                        <li><a class="item-lista-slide" href="#"
+                                onclick="alterarIframe('https://docs.google.com/presentation/d/e/2PACX-1vStT9nyTPRAbV9npB-CY3CUsj7QvnqErgsRs57upVa7MU3j_steU2Sii079Rwr0Vv9lAYYBl6oaJeI0/embed?start=false&loop=false&delayms=3000')">Tags
+                                básicas</a></li>
+                        <li><a class="item-lista-slide" href="#"
+                                onclick="alterarIframe('https://docs.google.com/presentation/d/e/2PACX-1vT8ugt4XYr65q6rv7CTID2f_iSLSTNCcSRPPaWDySBU8Yqoaw5DbUwk87AiCd5Uoiv4ZWBCgUjwTQoO/embed?start=false&loop=false&delayms=30000')">Listas</a>
+                        </li>
+                        <li><a class="item-lista-slide" href="#"
+                                onclick="alterarIframe('https://docs.google.com/presentation/d/e/2PACX-1vRmQnvpe4HisheiD4BQCNF-4Gcmqu2Ha9beOaqjh5pmWrgYmvlEAuIUzeXS908pYFXfsaHLMLNPOa2i/embed?start=false&loop=false&delayms=3000')">CSS</a>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="container-lista">
+                    <ol>
+                        <p>Atividades</p>
+                        <li><a class="item-lista-slide" href="#"
+                                onclick="alterarIframe('https://docs.google.com/presentation/d/e/2PACX-1vQmM44fhIBKWby5iC-OtI1M8KllcSPpPQMNFSxASpmmp2rncMAAidCFyrpfdxTB5diDFWcC5GKJWQxy/embed?start=false&loop=false&delayms=3000')">Publique
+                                seu site (GitHub
+                                Pages)</a></li>
+                        <li><a class="item-lista-slide" href="#"
+                                onclick="alterarIframe('https://docs.google.com/presentation/d/e/2PACX-1vTKwFOoIK_gwDNgJ7w57S9c8mWlJMiH6A0Q-ljXaw0PWprwC5wHpBFOtKBvwRZSoF5B0LgNT8o0idz1/embed?start=false&loop=false&delayms=3000')">Página
+                                Web para divulgação de um livro</a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <iframe id="iframe" frameborder="0"></iframe>
+
+            <!-- <div class="botao-voltar">
+                <a href="index.html"><img class="links" id="voltar" src="img/voltar.png" alt="Voltar"></a>
+            </div> -->
+        </main>
+
+
+
+
+        <footer>
+            <small>&copy;2024 all rights reserved</small>
+        </footer>
+
+    </div>
+
+    <script src="/js/scripts.js"></script>
+
+</body>
+
+</html>
