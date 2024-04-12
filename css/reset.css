@@ -45,4 +45,6 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+	max-width: 30%;
+	min-height: 30vh;
 }
