@@ -29,7 +29,7 @@
     border: none;
     margin: 5px;
     background: none;
-    color: #fff;
+    color: var(--cor5);;
     cursor: pointer;
     position: fixed;
     top: 0;

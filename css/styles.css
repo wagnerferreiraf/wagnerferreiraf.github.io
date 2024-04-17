@@ -1,5 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Micro+5&display=swap');
 
+
+:root {
+    --cor1: #111;
+    --cor2: #262526;
+    --cor3: #EAF205;
+    --cor4: #F2E205;
+    --cor5: #F2EDE4; 
+}
+/* :root {
+    --cor1: #F2F2F2;
+    --cor2: #A6A6A6;
+    --cor3: #8C8C8C;
+    --cor4: #404040;
+    --cor5: #0D0D0D; 
+} */
+
+
+
 body {
     box-sizing: border-box;
     margin: 0;
@@ -7,7 +25,8 @@ body {
     overflow-x: hidden;
     /* background: linear-gradient(to top, rgb(232, 228, 252), rgb(201, 190, 252), rgb(110, 81, 250), rgb(41, 0, 245)) no-repeat; */
     /* background: radial-gradient(rgb(41, 0, 245), rgb(232, 228, 252)); */
-    background: linear-gradient(to bottom, #333, #ccc) no-repeat;
+    /* background: linear-gradient(to bottom, #333, #ccc) no-repeat; */
+    background-color: var(--cor1);
     background-size: cover;
     width: 100vw;
     min-height: 100vh;
@@ -15,6 +34,8 @@ body {
 
 main {
     min-height: 83vh;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .conteudo {
@@ -25,15 +46,16 @@ main {
 h1 {
     width:  fit-content;
     max-width: 70vw;
-    color: #fff;
+    color: black;
     font-weight: bold;
     margin: 5px auto;
     font-family: cursive;
     font-size: 180%;
     margin-bottom: 30px;
-    border: 8px double #f5f5f5;
+    border: 8px double var(--cor4);
     border-radius: 5px;
     padding: 5px;
+    background-color: var(--cor5);
 }
 
 h2 {
@@ -43,20 +65,29 @@ h2 {
 }
 .subtitulo {
     font-weight: bold;
-    color: #fff;
+    color: #000;
     margin: 15px auto;
     font-size: 140%;
 }
 
 .divs{
-    padding: 5px 10px;
+    padding: 5px;
     text-align: center;
-    background-color: #f5f5f5;
+    background-color: var(--cor2);
     border: solid 2px black;
     border-radius: 5px;
-    margin: 0 5% 5px;
+    margin: 0 2% 5px;
 }
 
+.card-fundo-colorido{
+    padding: 5px;
+    text-align: center;
+    border: solid 2px black;
+    background-color: var(--cor3);
+    border-radius: 5px;
+    margin:5px;
+    flex-grow: 1; 
+}
 
 a {
     text-decoration: none;

@@ -7,12 +7,12 @@ function toggleSidebar() {
         sidebar.style.width = '0';
         content.style.marginLeft = '0';
         // toggleBtn.innerHTML = '☰';
-        toggleBtn.style.color = '#f1f1f1';
+        toggleBtn.style.color = 'var(--cor5';
     } else {
         sidebar.style.width = '150px';
         content.style.marginLeft = '250px';
         // toggleBtn.innerHTML = '☰';
-        toggleBtn.style.color = 'red';
+        toggleBtn.style.color = 'var(--cor4)';
     }
 
     // Toggle para mostrar/ocultar subitens
