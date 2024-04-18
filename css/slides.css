@@ -16,7 +16,7 @@ main {
 #iframe {
     width: 1024px;
     height: 485px;
-    max-width: 90vw;
+    max-width: 80vw;
     max-height: 65vw;
     border: 6px double;
     border-radius: 5px;
@@ -74,7 +74,7 @@ a {
 
 .container-lista {
     width: 350px;
-    max-width: 90vw;
+    max-width: 75vw;
     margin: 5px;
     vertical-align: top;
     display: inline-block;
@@ -85,7 +85,7 @@ a {
 
 .container-listas-flex {
     width: 1024px;
-    max-width: 90vw;
+    max-width: 80vw;
     display: flex;
     justify-content:space-around;
     flex-wrap: wrap;

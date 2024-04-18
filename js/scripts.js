@@ -12,7 +12,7 @@ function toggleSidebar() {
         sidebar.style.width = '150px';
         content.style.marginLeft = '250px';
         // toggleBtn.innerHTML = '☰';
-        toggleBtn.style.color = 'red';
+        toggleBtn.style.color = '#000';
     }
 
     // Toggle para mostrar/ocultar subitens
@@ -22,11 +22,11 @@ function toggleSidebar() {
             var displayStyle = window.getComputedStyle(subitemList).display;
             if (displayStyle === 'none') {
                 subitemList.style.display = 'block';
-                subitemToggle.children[0].style.color = 'red';
+                // subitemToggle.children[0].style.color = 'red';
                 subitemToggle.children[0].style.fontWeight= 'bold'
             } else {
                 subitemList.style.display = 'none';
-                subitemToggle.children[0].style.color = '';
+                // subitemToggle.children[0].style.color = '';
                 subitemToggle.children[0].style.fontWeight= 'normal'
             }
         });
