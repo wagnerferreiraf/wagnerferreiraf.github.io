@@ -10,7 +10,7 @@ function toggleSidebar() {
         toggleBtn.style.color = 'var(--cor5)';
     } else {
         sidebar.style.width = '150px';
-        content.style.marginLeft = '250px';
+        content.style.marginLeft = '70px';
         // toggleBtn.innerHTML = '☰';
         toggleBtn.style.color = '#000';
     }
