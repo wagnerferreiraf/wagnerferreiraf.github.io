@@ -45,21 +45,24 @@ a {
 
 @media only screen and (max-width: 599px) {
     img {
-        max-height: 300px;
-        max-width: 300px;
-        margin: auto;
+        max-height: 250px;
+        max-width: 220px;
+        margin-bottom: auto auto 0;
     }
     body {
         margin: auto 50px;
         background-color: var(--cor5);
         padding-top: 50px;
     }
+    a {
+        max-width: 30px;
+    }
     .div-indicators {
         position: absolute;
         bottom: 0;
-        left: 53px;
+        left: 30px;
         background-color: var(--cor3);
-        width: 245px;
+        width: 222px;
         height: 50px;
         border-bottom: 5px solid #666;
     }

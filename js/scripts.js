@@ -60,8 +60,7 @@ function adicionarOuvintes() {
 
             // Aplicar estilos apenas para o elemento clicado
             var elementoClicado = event.target;
-            // elementoClicado.style.color = 'rgb(200, 0, 30)';
-            elementoClicado.style.fontWeight = '900';
+            elementoClicado.style.fontWeight = 'bold';
         });
     }
 }
