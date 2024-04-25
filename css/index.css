@@ -86,3 +86,18 @@ td{
 .subtitulo {
     width: 100%;
 }
+
+
+@media only screen and (min-width: 767px) {
+    .carousel {
+        width:600px;
+        height:400px;
+    }
+}
+
+@media only screen and (max-width: 766px) {
+    .carousel {
+        width:350px;
+        height:400px;
+    }
+}

@@ -1,0 +1,66 @@
+:root {
+    --cor1: #111;
+    --cor2: #262526;
+    --cor3: #EAF205;
+    --cor4: #F2E205;
+    --cor5: #F2EDE4;
+}
+
+body {
+    padding: 25px;
+    background-color: var(--cor2);
+}
+
+.carousel-indicators {
+    position: fixed;
+    bottom: 0;
+}
+
+a {
+    background-color: black;
+}
+
+
+
+@media only screen and (width: 600px) {
+    img {
+        max-width: 325px;
+        max-height: 325px;
+        margin: auto;
+    }
+
+    body {
+        margin: auto 65px;
+        background-color:var(--cor4);
+    }
+    .div-indicators {
+        position: absolute;
+        bottom: 0;
+        left: 90px;
+        background-color: var(--cor2);
+        width: 420px;
+        height: 50px;
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    img {
+        max-height: 300px;
+        max-width: 300px;
+        margin: auto;
+    }
+    body {
+        margin: auto 50px;
+        background-color: var(--cor5);
+        padding-top: 50px;
+    }
+    .div-indicators {
+        position: absolute;
+        bottom: 0;
+        left: 53px;
+        background-color: var(--cor3);
+        width: 245px;
+        height: 50px;
+        border-bottom: 5px solid #666;
+    }
+}
