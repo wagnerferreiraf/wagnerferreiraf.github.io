@@ -45,14 +45,14 @@ a {
 
 @media only screen and (max-width: 599px) {
     img {
-        max-height: 250px;
+        max-height: 240px;
         max-width: 220px;
         margin-bottom: auto auto 0;
     }
     body {
-        margin: auto 50px;
+        margin: auto 30px;
         background-color: var(--cor5);
-        padding-top: 50px;
+        padding: 10px 0 0;
     }
     a {
         max-width: 30px;
