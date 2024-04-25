@@ -6,18 +6,15 @@ function toggleSidebar() {
     if (sidebar.style.width === '150px') {
         sidebar.style.width = '0';
         content.style.marginLeft = '0';
-        // toggleBtn.innerHTML = '☰';
         toggleBtn.style.color = 'var(--cor5)';
     } else {
         var subitemLists = document.querySelectorAll('.subitem-list');
         subitemLists.forEach(function (subitemList) {
             subitemList.style.display = 'none';
-            subitemToggle.children[0].style.fontWeight= 'normal';
         });
         sidebar.style.width = '150px';
         content.style.marginLeft = '70px';
-        toggleBtn
-        // toggleBtn.innerHTML = '☰';
+        subitemToggle.children[0].classList.remove('bold-font');
         toggleBtn.style.color = '#000';
     }
 
@@ -28,11 +25,8 @@ function toggleSidebar() {
             var displayStyle = window.getComputedStyle(subitemList).display;
             if (displayStyle === 'none') {
                 subitemList.style.display = 'block';
-                subitemToggle.children[0].style.fontWeight= 'bold'
             } else {
                 subitemList.style.display = 'none';
-                // subitemToggle.children[0].style.color = '';
-                subitemToggle.children[0].style.fontWeight= 'normal'
             }
         });
     });

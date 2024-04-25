@@ -20,7 +20,7 @@
     transition: 0.3s;
 }
 
-.sidebar a:hover {
+.link-menu:hover {
     font-weight: bold;
 }
 
@@ -44,3 +44,6 @@
     margin-left: 20px;
     display: none;
 }
+/* .subitem-toggle>a {
+    font-weight: bold;
+} */
