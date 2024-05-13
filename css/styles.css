@@ -30,7 +30,7 @@ main {
 }
 
 .conteudo {
-    transition: margin-left 0.5s;
+    /* transition: margin-left 0.5s; */
     padding: 2vh 1vw 0 1vw;
 }
 
@@ -100,7 +100,6 @@ a {
 
 .links:hover {
     color: rgb(255, 255, 255);
-    /* box-shadow: 0 0 15px 10px rgba(41, 0, 245) inset; */
     box-shadow: 0 0 15px 10px #000 inset;
     font-size: 120%;
     transform: scale(1.20,1.20);
