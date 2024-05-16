@@ -8,6 +8,12 @@ img {
 
 .rede-social {
     margin: auto 15px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.rede-social:hover{
+    transform: scale(1.2);
+
 }
 
 #mapa {
