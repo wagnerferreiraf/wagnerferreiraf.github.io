@@ -73,14 +73,22 @@ thead {
 th {
     text-align: center;
     padding: 6px;
-    background-color: rgb(226, 226, 226);
+    background-color: #aaa;
     border: 1px solid;
+}
+
+
+tr:nth-child(even) {
+    background-color: #ddd;
+}
+tr:nth-child(odd) {
+    background-color: #fff;
 }
 
 td{
     border: 1px solid;
     padding: 6px;
-    background-color: #fff;
+
 }
 
 .subtitulo {

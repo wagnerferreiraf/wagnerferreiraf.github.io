@@ -59,10 +59,10 @@ main {
     list-style-position: inside;
     text-align: left;
 }
-
 .conteudo li:hover {
     background-color: #555;
     color: #fff;
+    opacity: 1;
 }
 .conteudo a:hover {
     color: #fff;
@@ -92,3 +92,6 @@ a {
     margin: auto auto 10px auto;
 }
 
+.container-listas-flex div:first-child {
+    opacity: 0.6;
+}
