@@ -1,7 +1,7 @@
 Parágrafo:
     Dinâmico - Flexivel - Eficiante
 
-Subtítulo nível 2:
+Título (h1):
     Flexbox: Flexible Box Layout Module
 
 Parágrafo:
