@@ -33,7 +33,6 @@ function toggleSidebar() {
 }
 
 // Altera slide da página slides
-
 function alterarIframe(url) {
     var iframe = document.getElementById('iframe');
     iframe.src = url;
