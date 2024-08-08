@@ -125,3 +125,15 @@ span {
 #ultimo-container {
     padding-bottom: 20px;
 }
+
+.pdf {
+    border: 2px solid white;
+    height: 70vh;
+    width: 100%;
+    display: block;
+}
+
+.container-pdf a{
+    color: var(--cor5);
+}
+
