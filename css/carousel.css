@@ -22,7 +22,7 @@ a {
 
 
 
-@media only screen and (width: 600px) {
+@media only screen and (min-width: 600px) {
     img {
         max-width: 325px;
         max-height: 325px;
@@ -36,10 +36,13 @@ a {
     .div-indicators {
         position: absolute;
         bottom: 0;
-        left: 90px;
+        left: 50px;
         background-color: var(--cor2);
-        width: 420px;
+        width: 500px;
         height: 50px;
+    }
+    a {
+        max-width: 50px;
     }
 }
 
