@@ -1,0 +1,48 @@
+.divFooterLinks,.divFooterLinksUteis {
+    text-align: center;
+    margin: 10px 10px 0;
+    width: 120px;
+}
+
+.divFooterLinksUteis ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.divLinksUteis {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.divLinksUteis ul {
+    border-top: 2px solid;
+}
+
+.divFooter ul {
+    list-style-type: none;
+}
+
+.divSocialMedia {
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcon {
+    width: 30px;
+    margin: auto 30px;
+}
+.socialIcon:hover {
+    transform: scale(1.4);
+}
+
+.copyright {
+    font-size: 80%;
+    text-align: center;
+}
+
+.copyright img {
+    width: 150px;
+}

@@ -1,0 +1,124 @@
+.titulo {
+    font-family: "Dancing Script", Pacifico;
+    font-size: 30px;
+}
+
+.listaMenu {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    list-style-type: none;
+    height: 50px;
+}
+
+.listaSubMenu {
+    list-style-type: none;
+    position: absolute;
+    left: 0;
+    top: 25px;
+}
+
+.listaSubMenu a {
+    display: block;
+    width: max-content;
+}
+
+.itemMenu {
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 5px;
+    padding: 0 2px;
+}
+
+.itemMenu::after {
+    content: '';
+    position: absolute;
+    background-color: var(--background);
+    top: 15%;
+    right: -12px;
+    width: 1px;
+    height: 70%;
+}
+
+.itemMenu:last-child::after {
+    display: none;
+}
+
+.itemSubMenu:last-child {
+    margin-bottom: 10px;
+}
+
+@media (min-width:601px) {
+    #header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--primary);
+        position: relative;
+    }
+
+    .titulo {
+        left: 10px;
+        bottom: 5px;
+        width: max-content;
+        position: absolute;
+    }
+
+    .listaSubMenu {
+        overflow: hidden;
+        max-height: 0;
+        transition: 1s;
+        background-color: var(--secundary);
+        padding: 0 5px;
+        border-radius: 5px;
+    }
+
+    .itemMenu:hover {
+        color: #bbb;
+        border: 1px solid white;
+
+    }
+
+    .itemSubMenu:hover {
+        color: #bbb;
+    }
+
+    .itemSubMenu {
+        color: #fff;
+        margin-top: 10px;
+    }
+
+    .itemMenu:hover .listaSubMenu {
+        max-height: 200px;
+    }
+}
+
+@media (max-width:600px) {
+    #header {
+        overflow: hidden;
+        transition: .5s;
+    }
+
+    .menuMobile {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: center;
+        position: relative;
+        background-color: var(--primary);
+    }
+
+    .listaSubMenu {
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .titulo {
+        text-align: center;
+    }
+}
