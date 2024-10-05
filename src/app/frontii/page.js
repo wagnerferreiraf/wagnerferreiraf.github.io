@@ -1,6 +1,6 @@
 "use client";
-import styles from '../../styles/FrontII.module.css';
-import HamburgerMenuContainer from '../../components/HamburgerMenuContainer';
+import styles from '@/styles/FrontII.module.css';
+import HamburgerMenuContainer from '@/components/HamburgerMenuContainer.js';
 import { useState, memo } from 'react';
 
 // Componente Memoizado para o iframe
@@ -41,6 +41,7 @@ const FrontII = () => {
 
     return (
         <>
+            <h2 className='subtitulo'>Front-end II</h2>
             <div className={styles.mainContainer}>
                 <div className={styles.coloredCard}>
                     <div className={styles.flexListContainer}>

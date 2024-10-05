@@ -1,4 +1,5 @@
-import styles from '../styles/Footer.module.css';
+import styles from '@/styles/Footer.module.css';
+import Link from 'next/link';
 
 const Footer = () => {
     return (
@@ -16,8 +17,8 @@ const Footer = () => {
                     <div className={styles.divFooterLinks}>
                         <h3 className={styles.h3}>Sobre</h3>
                         <ul>
-                            <li><a href='sobre.html'>Sobre</a></li>
-                            <li><a href='contato.html'>Contato</a></li>
+                            <li><Link href='sobre.html'>Sobre</Link></li>
+                            <li><Link href='contato.html'>Contato</Link></li>
                             <li><a href='https://buscatextual.cnpq.br/buscatextual/visualizacv.do?metodo=apresentar&id=K4434533T9'
                                 target='_blank'>Lates</a></li>
                         </ul>
@@ -46,7 +47,7 @@ const Footer = () => {
                     </a>
                 </div>
                 <div className={styles.copyright}>
-                    <div><img src='https://profile-counter.glitch.me/wagnerferreiraf/count.svg' /></div>
+                    {/* <div><img src='https://profile-counter.glitch.me/wagnerferreiraf/count.svg' /></div> */}
                     <p>Prof. Wagner &copy; 2024</p>
                 </div>
             </div>

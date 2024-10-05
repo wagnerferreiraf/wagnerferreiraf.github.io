@@ -1,4 +1,5 @@
-import styles from '../styles/Home.module.css';
+import styles from '@/styles/Home.module.css';
+import Link from 'next/link';
 
 
 export default function Home() {
@@ -51,9 +52,9 @@ export default function Home() {
 
                     <div className={styles.cardLinks}>
                         <nav className={styles.projetos}>
-                            <a className={styles.links} href="atividades-2a.html">2º A</a>
-                            <a className={styles.links} href="atividades-2b.html">2º B</a>
-                            {/* <a className={styles.links} href="trabalho-avaliativo-1-bimestre.html">1º Bimestre</a> */}
+                            <Link className={styles.links} href="atividades-2a.html">2º A</Link>
+                            <Link className={styles.links} href="atividades-2b.html">2º B</Link>
+                            {/* <Link className={styles.links} href="trabalho-avaliativo-1-bimestre.html">1º Bimestre</Link> */}
                             <a className={styles.links}
                                 href="https://docs.google.com/spreadsheets/d/1sQI0fGEdmvHMJVBtg8HXZUX66SvQazzMyWQfaXifpDo/edit#gid=0"
                                 target="_blank">Editar Planilha</a>
@@ -66,8 +67,8 @@ export default function Home() {
 
                     <div className={styles.cardLinks}>
                         <nav className="botoes">
-                            <a className={styles.links} href="slides-front-end-i.html">Slides</a>
-                            <a className={styles.links} href="cores.html">Cores</a>
+                            <Link className={styles.links} href="slides-front-end-i.html">Slides</Link>
+                            <Link className={styles.links} href="cores.html">Cores</Link>
                             <a className={styles.links} href="https://developer.mozilla.org/pt-BR/docs/Web" target="_blank">MDN</a>
                         </nav>
                     </div>
@@ -79,7 +80,7 @@ export default function Home() {
 
                     <div className={styles.cardLinks}>
                         <nav className="botoes">
-                            <a className={styles.links} href="slides-front-end-ii.html">Slides</a>
+                            <Link className={styles.links} href="slides-front-end-ii.html">Slides</Link>
                             <a className={styles.links} href="https://developer.mozilla.org/pt-BR/docs/Web" target="_blank">MDN</a>
                             <a className={styles.links} href="https://react.dev/" target="_blank">React</a>
                             <a className={styles.links} href="https://nextjs.org/docs" target="_blank">Next.js</a>                      

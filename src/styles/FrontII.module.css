@@ -1,8 +1,8 @@
 #presentationIframe {
-    width: 1536px;
-    height: 728px;
-    max-width: 80vw;
-    max-height: 73vw;
+    width: 1200px;
+    height: 720px;
+    max-width: 100vw;
+    max-height: 60vw;
     border: 6px double;
     border-radius: 5px;
     display: block;
@@ -27,7 +27,7 @@
 
 .mainContainer p:not(first-of-type) {
     font-weight: bold;
-    box-shadow: 5px 5px black inset;
+    box-shadow: 5px 5px var(--secundary) inset;
     padding-top: 8px;
     padding-left: 6px;
     margin: 10px auto;
@@ -61,11 +61,12 @@
     position: relative;
     width: 350px;
     max-width: 75vw;
-    margin: 5px;
+    margin: auto;
     vertical-align: top;
     display: inline-block;
     border: 2px solid var(--primary);
     border-radius: 5px;
+    padding: 0 2px;
 }
 
 
@@ -74,20 +75,15 @@
 }
 
 .flexListContainer {
-    width: 1536px;
+    width: 1200px;
     max-width: 80vw;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    gap: 10px;
     flex-wrap: wrap;
     margin: auto auto 10px auto;
 }
 
 .flexListContainer #opaco {
     opacity: 0.6;
-}
-
-@media (max-width: 600px) {
-    #presentationIframe {
-        max-width: 100%;
-    }
 }

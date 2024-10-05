@@ -46,10 +46,6 @@
     display: none;
 }
 
-.itemSubMenu:last-child {
-    margin-bottom: 10px;
-}
-
 @media (min-width:601px) {
     #header {
         display: flex;
@@ -73,6 +69,7 @@
         background-color: var(--secundary);
         padding: 0 5px;
         border-radius: 5px;
+        z-index: 1;
     }
 
     .itemMenu:hover {
@@ -88,6 +85,10 @@
     .itemSubMenu {
         color: #fff;
         margin-top: 10px;
+    }
+
+    .itemSubMenu:last-child {
+        margin-bottom: 10px;
     }
 
     .itemMenu:hover .listaSubMenu {
@@ -120,5 +121,9 @@
 
     .titulo {
         text-align: center;
+    }
+
+    .titulo span {
+        display: block;
     }
 }

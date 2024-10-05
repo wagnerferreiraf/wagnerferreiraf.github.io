@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from '../styles/HamburgerMenu.module.css';
+import styles from '@/styles/HamburgerMenu.module.css';
 
 const HamburgerMenu = ({ onClick }) => {
     const [isOpen, setIsOpen] = useState(false);

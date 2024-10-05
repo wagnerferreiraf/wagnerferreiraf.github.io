@@ -1,7 +1,7 @@
 const Sobre = () => {
     return (
         <div>
-            <h1>Sobre</h1>
+            <h2 className='subtitulo'>Sobre</h2>
             <p>Página em construção</p>
         </div>
     );

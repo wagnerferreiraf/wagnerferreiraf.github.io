@@ -1,10 +1,10 @@
-const Contato = () => {
+export default function Contato () {
+    const title = "Contato";
+
     return (
         <div>
-        <h1>Contato</h1>
+            <h2 className='subtitulo'>Contato</h2>
         <p>Página em construção</p>
         </div>
     )
 }
-
-export default Contato;
