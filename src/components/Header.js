@@ -41,7 +41,7 @@ const Header = () => {
             e.preventDefault();
             setShowSubMenu((prevState) => {
                 const newState = !prevState;
-                setHeight(newState ? '145px' : '110px');
+                setHeight(newState ? '160px' : '110px');
                 return newState;
             });
         }
