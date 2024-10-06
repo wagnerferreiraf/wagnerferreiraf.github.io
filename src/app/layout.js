@@ -1,13 +1,23 @@
 import "@/styles/globals.css";
 import Header from "@/components/Header.js";
-import Footer from "@/components/Footer.js";
+// import Footer from "@/components/Footer.js";
+import FooterVisibility from "@/components/FooterVisibility.js";
 
 export const metadata = {
   title: "Hora de Estudar!",
-  description: "Site do Prof. Wagner Ferreira",
+  description: "Prof. Wagner Ferreira",
   charset: "UTF-8",
+  author: "Wagner Ferreira",
+  keywords: "HTML, CSS, JavaScript, React, Next.js",
+  property: {
+    "og:title": "Hora de Estudar!",
+    "og:description": "Prof. Wagner Ferreira",
+    "og:type": "website",
+    "og:url": "https://horadeestudar.vercel.app",
+    "og:image": "/images/og-image.png"
+  },
   icons : {
-    icon: "/images/icon.png"
+    icon: "/icons/favicon.ico",
   }
 };
 
@@ -17,9 +27,8 @@ export default function RootLayout({ children }) {
       <body>
         <Header />
         <main>{children}</main>
-        <Footer />
+        <FooterVisibility />
       </body>
-
     </html>
   );
 }

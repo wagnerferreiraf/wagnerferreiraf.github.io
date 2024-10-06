@@ -41,14 +41,14 @@ const Header = () => {
             e.preventDefault();
             setShowSubMenu((prevState) => {
                 const newState = !prevState;
-                setHeight(newState ? '160px' : '120px');
+                setHeight(newState ? '145px' : '110px');
                 return newState;
             });
         }
     };
 
     const btnClick = () => {
-        setHeight(isMenuOpen ? '60px' : '120px');
+        setHeight(isMenuOpen ? '60px' : '110px');
         setIsMenuOpen((prev) => !prev);
         if (!isMenuOpen) {
             setShowSubMenu(false);
