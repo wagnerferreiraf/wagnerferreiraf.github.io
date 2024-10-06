@@ -99,7 +99,13 @@ td {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 450px) {
+  main {
+    padding-bottom: 250px;
+  }
+  
+}
+@media ((max-width: 600px) and (min-width: 451px)) {
 
   main {
     min-height: calc(100vh - 310px);
