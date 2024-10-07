@@ -3,7 +3,6 @@ import styles from '../styles/Header.module.css';
 import { useState, useEffect } from 'react';
 import HamburgerMenu from './HamburgerMenu.js';
 
-
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [showSubMenu, setShowSubMenu] = useState(false);
@@ -21,7 +20,6 @@ const Header = () => {
         } else {
             setHeight('60px');
         }
-
     };
 
     useEffect(() => {
@@ -62,7 +60,6 @@ const Header = () => {
         <header id={styles.header} style={{ height }}>
             <div className={styles.menuMobile}>
                 <HamburgerMenu className={styles.hamburgerMenu} onClick={btnClick} isOpen={isMenuOpen} />
-
                 <h1 className={styles.titulo}>Prof. Wagner Ferreira</h1>
             </div>
             <nav>
