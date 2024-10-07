@@ -2,6 +2,7 @@
 import styles from '@/styles/Front.module.css';
 import HamburgerMenuContainer from '@/components/HamburgerMenuContainer.js';
 import { useState, memo } from 'react';
+import Link from 'next/link';
 
 // Componente Memoizado para o iframe
 const Frame = memo(({ url }) => {
@@ -53,7 +54,7 @@ const FrontII = () => {
                             <ol className={styles.dropDownList}>
                                 <p>3º Bimestre</p>
                                 <li>
-                                    <a
+                                    <Link
                                         className={styles.listItemLink}
                                         href="#"
                                         onClick={() =>
@@ -61,10 +62,10 @@ const FrontII = () => {
                                         }
                                     >
                                         CSS
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a
+                                    <Link
                                         className={styles.listItemLink}
                                         href="#"
                                         onClick={() =>
@@ -72,10 +73,10 @@ const FrontII = () => {
                                         }
                                     >
                                         DOM
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a
+                                    <Link
                                         className={styles.listItemLink}
                                         href="#"
                                         onClick={() =>
@@ -83,7 +84,7 @@ const FrontII = () => {
                                         }
                                     >
                                         React
-                                    </a>
+                                    </Link>
                                 </li>
                             </ol>
                         </div>
@@ -121,7 +122,7 @@ const FrontII = () => {
                     </div>
                 </div>
                 <div className={styles.coloredCard}>
-                    <Frame url={frameSeted} /> {/* Passando o URL para o componente memoizado */}
+                    <Frame url={frameSeted}/> {/* Passando o URL para o componente memoizado */}
                 </div>
             </div>
         </>

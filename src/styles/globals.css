@@ -99,7 +99,7 @@ td {
 
 @media (max-width: 600px) {
   main {
-    min-height: calc(100vh - 220px); /* Ajuste de altura para telas menores */
+    min-height: calc(100vh - 320px); /* Ajuste de altura para telas menores */
   }
 
   header {
