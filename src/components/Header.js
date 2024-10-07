@@ -8,7 +8,7 @@ import HamburgerMenu from './HamburgerMenu.js';
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [showSubMenu, setShowSubMenu] = useState(false);
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
+    const [isMobile, setIsMobile] = useState(false);
     const [height, setHeight] = useState('100px');
 
     // Função para verificar se a tela é menor que 600px

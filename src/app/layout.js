@@ -1,6 +1,5 @@
 import "@/styles/globals.css";
 import Header from "@/components/Header.js";
-// import FooterVisibility from "@/components/FooterVisibility.js";
 import Footer from "@/components/Footer.js";
 
 export const metadata = {
@@ -27,7 +26,6 @@ export default function RootLayout({ children }) {
       <body>
         <Header />
         <main>{children}</main>
-        {/* <FooterVisibility /> */}
         <Footer />
       </body>
     </html>
