@@ -3,8 +3,6 @@ import styles from '../styles/Header.module.css';
 import { useState, useEffect } from 'react';
 import HamburgerMenu from './HamburgerMenu.js';
 
-
-
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [showSubMenu, setShowSubMenu] = useState(false);
@@ -26,18 +24,6 @@ const Header = () => {
 
     };
 
-    useEffect(() => {
-        checkIsMobile(); // Verifica o estado inicial
-
-        // Adiciona um ouvinte para o redimensionamento da janela
-        window.addEventListener('resize', checkIsMobile);
-
-        // Remove o ouvinte quando o componente for desmontado
-        return () => {
-            window.removeEventListener('resize', checkIsMobile);
-        };
-    }, []);
-
     const toggleSubMenu = (e) => {
         if (isMobile) {
             e.preventDefault();
@@ -48,6 +34,20 @@ const Header = () => {
             });
         }
     };
+
+    useEffect(() => {
+        checkIsMobile(); // Verifica o estado inicial
+
+        // Adiciona um ouvinte para o redimensionamento da janela
+        window.addEventListener('resize', checkIsMobile);
+
+        // Remove o ouvinte quando o componente for desmontado
+        // return () => {
+        //     window.removeEventListener('resize', checkIsMobile);
+        // };
+    }, []);
+
+
 
     const btnClick = () => {
         setIsMenuOpen((prev) => {
