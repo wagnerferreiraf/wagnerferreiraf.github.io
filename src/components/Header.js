@@ -48,17 +48,21 @@ const Header = () => {
     };
 
     const btnClick = () => {
-        setHeight(isMenuOpen ? '60px' : '110px');
-        setIsMenuOpen((prev) => !prev);
-        if (!isMenuOpen) {
-            setShowSubMenu(false);
-        }
+        setIsMenuOpen((prev) => {
+            const newState = !prev;
+            setHeight(newState ? '110px' : '60px');
+            if (!newState) {
+                setShowSubMenu(false);
+            }
+            return newState;
+        });
     };
 
     return (
         <header id={styles.header} style={{ height }}>
             <div className={styles.menuMobile}>
-                <HamburgerMenu className={styles.hamburgerMenu} onClick={btnClick} />
+                <HamburgerMenu className={styles.hamburgerMenu} onClick={btnClick} isOpen={isMenuOpen} />
+
                 <h1 className={styles.titulo}>Prof. Wagner Ferreira</h1>
             </div>
             <nav>
