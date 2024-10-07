@@ -3,10 +3,12 @@ import styles from '../styles/Header.module.css';
 import { useState, useEffect } from 'react';
 import HamburgerMenu from './HamburgerMenu.js';
 
+
+
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [showSubMenu, setShowSubMenu] = useState(false);
-    const [isMobile, setIsMobile] = useState(false);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
     const [height, setHeight] = useState('100px');
 
     // Função para verificar se a tela é menor que 600px
@@ -14,12 +16,14 @@ const Header = () => {
         const isMobileView = window.innerWidth <= 600;
         setIsMobile(isMobileView);
         if (!isMobileView) {
-            setShowSubMenu(true);  // Fecha o submenu automaticamente se a tela ficar maior
+            setShowSubMenu(true);  // Mostra o submenu automaticamente se a tela ficar maior
             setIsMenuOpen(false); // Fecha o menu automaticamente se a tela ficar maior
             setHeight('100px');
         } else {
+            setShowSubMenu(false);
             setHeight('60px');
         }
+
     };
 
     useEffect(() => {
@@ -60,6 +64,7 @@ const Header = () => {
         <header id={styles.header} style={{ height }}>
             <div className={styles.menuMobile}>
                 <HamburgerMenu className={styles.hamburgerMenu} onClick={btnClick} isOpen={isMenuOpen} />
+
                 <h1 className={styles.titulo}>Prof. Wagner Ferreira</h1>
             </div>
             <nav>
