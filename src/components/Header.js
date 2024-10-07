@@ -74,7 +74,7 @@ const Header = () => {
                         <a href='#' onClick={toggleSubMenu}>Disciplinas</a>
                         {showSubMenu && (
                             <ul className={styles.listaSubMenu}>
-                                <li className={styles.itemSubMenu}><a href='/front-end-i'>Front-end I</a></li>
+                                <li className={styles.itemSubMenu}><a href='/fronti'>Front-end I</a></li>
                                 <li className={styles.itemSubMenu}><a href='/frontii'>Front-end II</a></li>
                             </ul>
                         )}

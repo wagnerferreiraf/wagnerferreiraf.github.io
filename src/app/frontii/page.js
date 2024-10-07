@@ -1,11 +1,11 @@
 "use client";
-import styles from '@/styles/FrontII.module.css';
+import styles from '@/styles/Front.module.css';
 import HamburgerMenuContainer from '@/components/HamburgerMenuContainer.js';
 import { useState, memo } from 'react';
 
 // Componente Memoizado para o iframe
 const Frame = memo(({ url }) => {
-    return <iframe src={url} id={styles.presentationIframe} />;
+    return <iframe src={url} className={styles.presentationIframe} />;
 });
 
 const FrontII = () => {
