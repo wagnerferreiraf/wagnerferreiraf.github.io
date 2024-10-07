@@ -8,7 +8,6 @@ export default function FooterVisibility() {
     const [showFooter, setShowFooter] = useState(false);
 
     useEffect(() => {
-        // Encontra a tag <main> do layout e a utiliza
         const mainElement = document.querySelector('main');
         mainRef.current = mainElement;
 
