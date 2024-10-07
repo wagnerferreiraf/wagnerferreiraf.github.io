@@ -72,7 +72,7 @@ const FrontII = () => {
                                             changeIframe('https://docs.google.com/presentation/d/1I7WBEztmjNyVB58prMXwiFDn6Kn2lGZTSvqzBlLLqFg/embed?start=false&loop=false&delayms=3000')
                                         }
                                     >
-                                        DOM
+                                        DOM + JS
                                     </Link>
                                 </li>
                                 <li>
@@ -83,9 +83,22 @@ const FrontII = () => {
                                             changeIframe('https://docs.google.com/presentation/d/1B5lLCUlkFIbDr2yzGcHnaooMON5GzhsRoX7WPojNWf4/embed?start=false&loop=false&delayms=3000')
                                         }
                                     >
-                                        React
+                                        React + Next.js
                                     </Link>
                                 </li>
+
+                                <li>
+                                    <Link
+                                        className={styles.listItemLink}
+                                        href="#"
+                                        onClick={() =>
+                                            changeIframe('https://docs.google.com/presentation/d/e/2PACX-1vQUV84ONPP4kHv4yZqgYayaej5HtrVPyjisAMR1e6Ge3wK2FqnP_2lRGEzgAW7SJhmWxcMAQ5Pj2g3r/embed?start=false&loop=false&delayms=3000')
+                                        }
+                                    >
+                                        JSX
+                                    </Link>
+                                </li>
+
                             </ol>
                         </div>
 
