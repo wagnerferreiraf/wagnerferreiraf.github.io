@@ -2,6 +2,7 @@
 import styles from '../styles/Header.module.css';
 import { useState, useEffect } from 'react';
 import HamburgerMenu from './HamburgerMenu.js';
+import Link from 'next/link';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -69,15 +70,15 @@ const Header = () => {
             </div>
             <nav>
                 <ul className={styles.listaMenu}>
-                    <li className={styles.itemMenu}><a href="/">Home</a></li>
-                    <li className={styles.itemMenu}><a href="/sobre">Sobre</a></li>
-                    <li className={styles.itemMenu}><a href="/contato">Contato</a></li>
+                    <li className={styles.itemMenu}><Link href="/">Home</Link></li>
+                    <li className={styles.itemMenu}><Link href="/sobre">Sobre</Link></li>
+                    <li className={styles.itemMenu}><Link href="/contato">Contato</Link></li>
                     <li className={styles.itemMenu}>
-                        <a href='#' onClick={toggleSubMenu}>Disciplinas</a>
+                        <Link href='#' onClick={toggleSubMenu}>Disciplinas</Link>
                         {showSubMenu && (
                             <ul className={styles.listaSubMenu}>
-                                <li className={styles.itemSubMenu}><a href='/fronti'>Front-end I</a></li>
-                                <li className={styles.itemSubMenu}><a href='/frontii'>Front-end II</a></li>
+                                <li className={styles.itemSubMenu}><Link href='/fronti'>Front-end I</Link></li>
+                                <li className={styles.itemSubMenu}><Link href='/frontii'>Front-end II</Link></li>
                             </ul>
                         )}
                     </li>

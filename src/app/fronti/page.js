@@ -40,6 +40,12 @@ const FrontII = () => {
         }
     };
 
+    window.addEventListener('click', (event) => {
+        if (event.target.tagName === 'IFRAME') {
+            event.preventDefault();
+        }
+    });
+    
     return (
         <>
             <h2 className='subtitulo'>Front-end I</h2>
