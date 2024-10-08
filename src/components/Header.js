@@ -26,8 +26,12 @@ const Header = () => {
     };
 
     const toggleSubMenu = (e) => {
+        e.preventDefault(); // Evita que o link seja seguido
+
+        checkIsMobile();
+
+        // Abre ou fecha o submenu
         if (isMobile) {
-            e.preventDefault();
             setShowSubMenu((prevState) => {
                 const isOpened = !prevState;
                 setHeight(isOpened ? '160px' : '110px');
@@ -48,21 +52,20 @@ const Header = () => {
         };
     }, []);
 
-
-
     const btnClick = () => {
-        const isOpened = !isMenuOpen;
+        setIsMenuOpen((prev) => {
+            const isOpened = !prev;
 
-        // Atualiza a altura com base no estado do menu
-        setHeight(isOpened ? '110px' : '60px');
+            // Atualiza a altura com base no estado do menu
+            setHeight(isOpened ? '110px' : '60px');
 
-        // Fecha o submenu se o menu for fechado
-        if (!isOpened) {
-            setShowSubMenu(false);
-        }
+            // Fecha o submenu se o menu for fechado
+            if (!isOpened) {
+                setShowSubMenu(false);
+            }
 
-        // Atualiza o estado do menu
-        setIsMenuOpen(isOpened);
+            return isOpened;
+        });
     };
 
     return (
