@@ -43,9 +43,9 @@ const Header = () => {
         window.addEventListener('resize', checkIsMobile);
 
         // Remove o ouvinte quando o componente for desmontado
-        return () => {
-            window.removeEventListener('resize', checkIsMobile);
-        };
+        // return () => {
+        //     window.removeEventListener('resize', checkIsMobile);
+        // };
     }, []);
 
 
