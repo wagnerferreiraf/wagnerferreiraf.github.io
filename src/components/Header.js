@@ -30,12 +30,11 @@ const Header = () => {
     };
 
     const btnClick = () => {
-        const newMenuOpenState = !isMenuOpen;
-        setIsMenuOpen(newMenuOpenState);
-        setHeight(newMenuOpenState ? '110px' : '60px'); // Ajuste a altura com base no novo estado do menu
-        if (newMenuOpenState) {
+        setHeight(height === '60px' ? '110px' : '60px'); 
+        if (isMenuOpen) {
             setShowSubMenu(false); // Fecha o submenu se o menu for fechado
         }
+        setIsMenuOpen(!isMenuOpen);
     };
 
 
