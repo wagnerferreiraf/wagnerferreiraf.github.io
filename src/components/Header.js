@@ -8,7 +8,7 @@ const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [showSubMenu, setShowSubMenu] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
-    const [height, setHeight] = useState('60px');
+    const [height, setHeight] = useState('100px');
 
     // Verifica se a tela é menor que 600px e faz o ajuste no menu
     const checkIsMobile = useCallback(() => {
