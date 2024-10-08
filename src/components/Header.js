@@ -37,7 +37,7 @@ const Header = () => {
     };
 
     useEffect(() => {
-        checkIsMobile(); 
+        checkIsMobile();
 
         // Adiciona um ouvinte de evento para verificar o tamanho da tela
         window.addEventListener('resize', checkIsMobile);
@@ -51,19 +51,18 @@ const Header = () => {
 
 
     const btnClick = () => {
-        setIsMenuOpen((prev) => {
-            const isOpened = !prev;
-    
-            // Atualiza a altura com base no estado do menu
-            setHeight(isOpened ? '110px' : '60px');
-    
-            // Fecha o submenu se o menu for fechado
-            if (!isOpened) {
-                setShowSubMenu(false);
-            }
-    
-            return isOpened;
-        });
+        const isOpened = !isMenuOpen;
+
+        // Atualiza a altura com base no estado do menu
+        setHeight(isOpened ? '110px' : '60px');
+
+        // Fecha o submenu se o menu for fechado
+        if (!isOpened) {
+            setShowSubMenu(false);
+        }
+
+        // Atualiza o estado do menu
+        setIsMenuOpen(isOpened);
     };
 
     return (
