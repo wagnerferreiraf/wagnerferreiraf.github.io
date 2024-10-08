@@ -5,22 +5,21 @@ import HamburgerMenu from './HamburgerMenu.js';
 import Link from 'next/link';
 
 const Header = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [showSubMenu, setShowSubMenu] = useState(false);
-    const [isMobile, setIsMobile] = useState(false);
-    const [height, setHeight] = useState('100px');
+    const [isMenuOpen, setIsMenuOpen] = useState();
+    const [showSubMenu, setShowSubMenu] = useState();
+    const [isMobile, setIsMobile] = useState();
+    const [height, setHeight] = useState();
 
-    // Função para verificar se a tela é menor que 600px
+    // Verifica se a tela é menor que 600px e faz o ajuste no menu
     const checkIsMobile = () => {
         const isMobileView = window.innerWidth <= 600;
         setIsMobile(isMobileView);
+        setIsMenuOpen(false);
         if (!isMobileView) {
-            setShowSubMenu(true);  // Mostra o submenu automaticamente se a tela ficar maior
-            setIsMenuOpen(false); // Fecha o menu automaticamente se a tela ficar maior
+            setShowSubMenu(true);
             setHeight('100px');
         } else {
             setShowSubMenu(false);
-            setIsMenuOpen(false);
             setHeight('60px');
         }
 
@@ -30,17 +29,17 @@ const Header = () => {
         if (isMobile) {
             e.preventDefault();
             setShowSubMenu((prevState) => {
-                const newState = !prevState;
-                setHeight(newState ? '160px' : '110px');
-                return newState;
+                const isOpened = !prevState;
+                setHeight(isOpened ? '160px' : '110px');
+                return isOpened;
             });
         }
     };
 
     useEffect(() => {
-        checkIsMobile(); // Verifica o estado inicial
+        checkIsMobile(); 
 
-        // Adiciona um ouvinte para o redimensionamento da janela
+        // Adiciona um ouvinte de evento para verificar o tamanho da tela
         window.addEventListener('resize', checkIsMobile);
 
         // Remove o ouvinte quando o componente for desmontado
@@ -54,10 +53,15 @@ const Header = () => {
     const btnClick = () => {
         setIsMenuOpen((prev) => {
             const isOpened = !prev;
+    
+            // Atualiza a altura com base no estado do menu
             setHeight(isOpened ? '110px' : '60px');
+    
+            // Fecha o submenu se o menu for fechado
             if (!isOpened) {
                 setShowSubMenu(false);
             }
+    
             return isOpened;
         });
     };
@@ -71,15 +75,15 @@ const Header = () => {
             </div>
             <nav>
                 <ul className={styles.listaMenu}>
-                    <li className={styles.itemMenu}><Link href="/">Home</Link></li>
-                    <li className={styles.itemMenu}><Link href="/sobre">Sobre</Link></li>
-                    <li className={styles.itemMenu}><Link href="/contato">Contato</Link></li>
+                    <li className={styles.itemMenu}><Link href="/" onClick={btnClick}>Home</Link></li>
+                    <li className={styles.itemMenu}><Link href="/sobre" onClick={btnClick}>Sobre</Link></li>
+                    <li className={styles.itemMenu}><Link href="/contato" onClick={btnClick}>Contato</Link></li>
                     <li className={styles.itemMenu}>
                         <Link href='#' onClick={toggleSubMenu}>Disciplinas</Link>
                         {showSubMenu && (
                             <ul className={styles.listaSubMenu}>
-                                <li className={styles.itemSubMenu}><Link href='/fronti'>Front-end I</Link></li>
-                                <li className={styles.itemSubMenu}><Link href='/frontii'>Front-end II</Link></li>
+                                <li className={styles.itemSubMenu}><Link href='/fronti' onClick={btnClick}>Front-end I</Link></li>
+                                <li className={styles.itemSubMenu}><Link href='/frontii' onClick={btnClick}>Front-end II</Link></li>
                             </ul>
                         )}
                     </li>
