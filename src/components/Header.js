@@ -20,6 +20,7 @@ const Header = () => {
             setHeight('100px');
         } else {
             setShowSubMenu(false);
+            setIsMenuOpen(false);
             setHeight('60px');
         }
 
@@ -46,7 +47,7 @@ const Header = () => {
         return () => {
             window.removeEventListener('resize', checkIsMobile);
         };
-    }, [isMobile]);
+    }, []);
 
 
 
