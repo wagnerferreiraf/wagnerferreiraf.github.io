@@ -53,12 +53,12 @@ const Header = () => {
 
     const btnClick = () => {
         setIsMenuOpen((prev) => {
-            const isOpen = !prev;
-            setHeight(isOpen ? '110px' : '60px');
-            if (!isOpen) {
+            const isOpened = !prev;
+            setHeight(isOpened ? '110px' : '60px');
+            if (!isOpened) {
                 setShowSubMenu(false);
             }
-            return isOpen;
+            return isOpened;
         });
     };
 
