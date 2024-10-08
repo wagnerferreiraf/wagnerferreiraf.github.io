@@ -1,37 +1,26 @@
 "use client";
 import styles from '../styles/Header.module.css';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import HamburgerMenu from './HamburgerMenu.js';
 import Link from 'next/link';
 
 const Header = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState();
-    const [showSubMenu, setShowSubMenu] = useState();
-    const [isMobile, setIsMobile] = useState();
-    const [height, setHeight] = useState();
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [showSubMenu, setShowSubMenu] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+    const [height, setHeight] = useState('60px');
 
     // Verifica se a tela é menor que 600px e faz o ajuste no menu
-    const checkIsMobile = () => {
+    const checkIsMobile = useCallback(() => {
         const isMobileView = window.innerWidth <= 600;
         setIsMobile(isMobileView);
-        setIsMenuOpen(false);
-        if (!isMobileView) {
-            setShowSubMenu(true);
-            setHeight('100px');
-        } else {
-            setShowSubMenu(false);
-            setHeight('60px');
-        }
-
-    };
+        setShowSubMenu(!isMobileView); // Controla o submenu diretamente com base na visualização
+        setHeight(isMobileView ? '60px' : '100px'); // Ajuste inicial baseado no tipo de visualização
+    }, []);
 
     const toggleSubMenu = (e) => {
-        e.preventDefault(); // Evita que o link seja seguido
-
-        checkIsMobile();
-
-        // Abre ou fecha o submenu
         if (isMobile) {
+            e.preventDefault();
             setShowSubMenu((prevState) => {
                 const isOpened = !prevState;
                 setHeight(isOpened ? '160px' : '110px');
@@ -39,6 +28,16 @@ const Header = () => {
             });
         }
     };
+
+    const btnClick = () => {
+        const newMenuOpenState = !isMenuOpen;
+        setIsMenuOpen(newMenuOpenState);
+        setHeight(newMenuOpenState ? '110px' : '60px'); // Ajuste a altura com base no novo estado do menu
+        if (newMenuOpenState) {
+            setShowSubMenu(false); // Fecha o submenu se o menu for fechado
+        }
+    };
+
 
     useEffect(() => {
         checkIsMobile();
@@ -50,23 +49,9 @@ const Header = () => {
         return () => {
             window.removeEventListener('resize', checkIsMobile);
         };
-    }, []);
+    }, [checkIsMobile]);
 
-    const btnClick = () => {
-        setIsMenuOpen((prev) => {
-            const isOpened = !prev;
 
-            // Atualiza a altura com base no estado do menu
-            setHeight(isOpened ? '110px' : '60px');
-
-            // Fecha o submenu se o menu for fechado
-            if (!isOpened) {
-                setShowSubMenu(false);
-            }
-
-            return isOpened;
-        });
-    };
 
     return (
         <header id={styles.header} style={{ height }}>
