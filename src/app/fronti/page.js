@@ -1,4 +1,5 @@
 "use client";
+import { useEffect } from 'react';
 import styles from '@/styles/Front.module.css';
 import HamburgerMenuContainer from '@/components/HamburgerMenuContainer.js';
 import { useState, memo } from 'react';
@@ -9,7 +10,7 @@ const Frame = memo(({ url }) => {
     return <iframe src={url} className={styles.presentationIframe} />;
 });
 
-const FrontII = () => {
+const FrontI = () => {
     const [frameSeted, setFrame] = useState(''); // URL do iframe
     const [maxHeights, setMaxHeights] = useState(['61px', '61px', '61px']); // Altura máxima de cada container
     const [openIndex, setOpenIndex] = useState(null); // Índice do container aberto
@@ -40,11 +41,20 @@ const FrontII = () => {
         }
     };
 
-    window.addEventListener('click', (event) => {
-        if (event.target.tagName === 'IFRAME') {
-            event.preventDefault();
-        }
-    });
+    useEffect(() => {
+        // Esse código só será executado no lado do cliente
+        const handleIframeClick = (event) => {
+            if (event.target.tagName === 'IFRAME') {
+                event.preventDefault();
+            }
+        };
+
+        window.addEventListener('click', handleIframeClick);
+
+        return () => {
+            window.removeEventListener('click', handleIframeClick);
+        };
+    }, []);
     
     return (
         <>
@@ -246,4 +256,4 @@ const FrontII = () => {
     );
 };
 
-export default FrontII;
+export default FrontI;
