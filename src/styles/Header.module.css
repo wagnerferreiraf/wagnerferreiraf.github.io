@@ -23,6 +23,7 @@
 .listaSubMenu a {
     display: block;
     width: max-content;
+    font-size: 16px;
 }
 
 .itemMenu {
@@ -63,6 +64,7 @@
     }
 
     .listaSubMenu {
+        left: 10px;
         overflow: hidden;
         max-height: 0;
         transition: 1s;
@@ -114,7 +116,6 @@
 
     .listaSubMenu {
         padding: 5px 0 0 15px;
-        font-size: 16px;
         display: flex;
         flex-direction: column;
         gap: 10px;

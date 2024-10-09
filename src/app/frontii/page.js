@@ -11,22 +11,22 @@ const Frame = memo(({ url }) => {
 
 const FrontII = () => {
     const [frameSeted, setFrame] = useState(''); // URL do iframe
-    const [maxHeights, setMaxHeights] = useState(['61px', '61px', '61px']); // Altura máxima de cada container
+    const [maxHeights, setMaxHeights] = useState(['61px', '61px', '61px', '61px']); // Altura máxima de cada container
     const [openIndex, setOpenIndex] = useState(null); // Índice do container aberto
-    const [iconStates, setIconStates] = useState([false, false, false]); // Estado dos ícones
+    const [iconStates, setIconStates] = useState([false, false, false, false]); // Estado dos ícones
 
     const changeIframe = (url) => {
         setFrame(url);
-        setMaxHeights(['61px', '61px', '61px']); // Reseta todos os containers
-        setIconStates([false, false, false]); // Reseta todos os ícones
+        setMaxHeights(['61px', '61px', '61px', '61px']); // Reseta todos os containers
+        setIconStates([false, false, false, false]); // Reseta todos os ícones
         setOpenIndex(null); // Reseta o índice aberto
     };
 
     const toggleMaxHeight = (index) => {
         // Se o índice clicado já está aberto, fecha-o
         if (openIndex === index) {
-            setMaxHeights(['61px', '61px', '61px']); // Reseta todos os containers
-            setIconStates([false, false, false]); // Reseta todos os ícones
+            setMaxHeights(['61px', '61px', '61px', '61px']); // Reseta todos os containers
+            setIconStates([false, false, false, false]); // Reseta todos os ícones
             setOpenIndex(null); // Reseta o índice aberto
         } else {
             // Abre o container clicado e fecha os outros
@@ -131,11 +131,34 @@ const FrontII = () => {
                                 </li>
                                 <p>4º Bimestre</p>
                             </ol>
+
+                        </div>
+
+
+                        <div className={styles.listContainer} style={{ maxHeight: maxHeights[3] }}>
+                            <HamburgerMenuContainer
+                                onClick={() => toggleMaxHeight(3)}
+                                isOpen={iconStates[3]} // Passando o estado do ícone como prop
+                            />
+                            <ol className={styles.dropDownList}>
+                                <p>Exemplos</p>
+                                <p>3º Bimestre</p>
+                                <li>
+                                    <a
+                                        className={styles.listItemLink}
+                                        href="/exemplos/DropDownMenu/DropDownMenu.zip"
+                                        target="_blank"
+                                        download>Drop-Down/MediaQuery
+                                    </a>
+                                </li>
+                                <p>4º Bimestre</p>
+                            </ol>
+
                         </div>
                     </div>
                 </div>
                 <div className={styles.coloredCard}>
-                    <Frame url={frameSeted}/> {/* Passando o URL para o componente memoizado */}
+                    <Frame url={frameSeted} /> {/* Passando o URL para o componente memoizado */}
                 </div>
             </div>
         </>
