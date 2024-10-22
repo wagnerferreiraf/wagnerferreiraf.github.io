@@ -8,14 +8,14 @@ const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [showSubMenu, setShowSubMenu] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
-    const [height, setHeight] = useState('100px');
+    const [height, setHeight] = useState('110px');
 
     // Verifica se a tela é menor que 600px e faz o ajuste no menu
     const checkIsMobile = useCallback(() => {
         const isMobileView = window.innerWidth <= 600;
         setIsMobile(isMobileView);
         setShowSubMenu(!isMobileView); // Controla o submenu diretamente com base na visualização
-        setHeight(isMobileView ? '60px' : '100px'); // Ajuste inicial baseado no tipo de visualização
+        setHeight(isMobileView ? '60px' : '110px'); // Ajuste inicial baseado no tipo de visualização
     }, []);
 
     const toggleSubMenu = (e) => {
@@ -30,11 +30,11 @@ const Header = () => {
     };
 
     const btnClick = () => {
-        setHeight(height === '60px' ? '110px' : '60px'); 
-        if (isMenuOpen) {
-            setShowSubMenu(false); // Fecha o submenu se o menu for fechado
+        if (isMobile) {
+            setHeight(height === '60px' ? '110px' : '60px');
+            if (isMenuOpen) setShowSubMenu(false); // Fecha o submenu se o menu for fechado
+            setIsMenuOpen(!isMenuOpen);
         }
-        setIsMenuOpen(!isMenuOpen);
     };
 
 
@@ -62,8 +62,8 @@ const Header = () => {
             <nav>
                 <ul className={styles.listaMenu}>
                     <li className={styles.itemMenu}><Link href="/" onClick={btnClick}>Home</Link></li>
-                    <li className={styles.itemMenu}><Link href="/sobre" onClick={btnClick}>Sobre</Link></li>
-                    <li className={styles.itemMenu}><Link href="/contato" onClick={btnClick}>Contato</Link></li>
+                    <li className={styles.itemMenu}><Link href="/about" onClick={btnClick}>Sobre</Link></li>
+                    <li className={styles.itemMenu}><Link href="/contact" onClick={btnClick}>Contato</Link></li>
                     <li className={styles.itemMenu}>
                         <Link href='#' onClick={toggleSubMenu}>Disciplinas</Link>
                         {showSubMenu && (
