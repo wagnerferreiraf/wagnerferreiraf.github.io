@@ -11,8 +11,63 @@
 }
 
 .socialImg {
-    width: 50px;
+    width: 40px;
 }
+
+
+.links {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+    border: solid 2px black;
+    margin: 5px auto;
+    background-color: var(--primary);
+    padding: 5px;
+    width: max-content;
+}
+
+.links:hover {
+    color: #000;
+    box-shadow: inset 0 0 5px var(--primary), 0 4px 6px var(--secundary);
+    background-color: #fff;
+}
+
+.linkSpace {
+    margin: 10px auto;
+}
+
+#frame {
+    width: 600px;
+    height: 300px;
+    max-width: 90vw;
+    margin: 20px auto;
+}
+
+#frame>iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.lastContainer {
+    margin-top: 10px;
+}
+
+.containerContacts {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.containerPrincipal nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
 
 @media (max-width:600px) {
     .containerPrincipal {
