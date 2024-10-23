@@ -1,4 +1,5 @@
-import styles from '../about/About.module.css';
+import styles from '@/styles/About.module.css';
+
 export default function Contato() {
 
     return (

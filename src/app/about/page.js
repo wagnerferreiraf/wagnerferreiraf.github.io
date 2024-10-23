@@ -1,5 +1,4 @@
-// import { staticGenerationAsyncStorage } from 'next/dist/client/components/static-generation-async-storage-instance';
-import styles from './About.module.css';
+import styles from '@/styles/About.module.css';
 
 const Sobre = () => {
     return (
