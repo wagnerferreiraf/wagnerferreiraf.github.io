@@ -8,14 +8,14 @@ const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [showSubMenu, setShowSubMenu] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
-    const [height, setHeight] = useState('110px');
+    const [height, setHeight] = useState('80px');
 
     // Verifica se a tela é menor que 600px e faz o ajuste no menu
     const checkIsMobile = useCallback(() => {
         const isMobileView = window.innerWidth <= 600;
         setIsMobile(isMobileView);
         setShowSubMenu(!isMobileView); // Controla o submenu diretamente com base na visualização
-        setHeight(isMobileView ? '60px' : '110px'); // Ajuste inicial baseado no tipo de visualização
+        setHeight(isMobileView ? '60px' : '80px'); // Ajuste inicial baseado no tipo de visualização
     }, []);
 
     const toggleSubMenu = (e) => {

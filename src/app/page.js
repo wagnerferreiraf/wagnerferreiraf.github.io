@@ -5,14 +5,15 @@ import Link from 'next/link';
 export default function Home() {
     return (
         <>
+            <h2 className='subtitulo'>Home</h2>
             <div className={`${styles.divs} ${styles.cards}`}>
 
                 <div className={styles.card}>
 
                     <table className={styles.table}>
-                    <caption>
-                        <h2 className={styles.subtitulo}>Disciplinas Ministradas</h2>
-                    </caption>
+                        <caption>
+                            <h2 className={styles.subtitulo}>Disciplinas Ministradas</h2>
+                        </caption>
                         <thead className={styles.thead}>
                             <tr>
                                 <th className={styles.th}>Disciplina</th>
@@ -83,7 +84,7 @@ export default function Home() {
                             <Link className={styles.links} href="slides-front-end-ii.html">Slides</Link>
                             <a className={styles.links} href="https://developer.mozilla.org/pt-BR/docs/Web" target="_blank">MDN</a>
                             <a className={styles.links} href="https://react.dev/" target="_blank">React</a>
-                            <a className={styles.links} href="https://nextjs.org/docs" target="_blank">Next.js</a>                      
+                            <a className={styles.links} href="https://nextjs.org/docs" target="_blank">Next.js</a>
                         </nav>
                     </div>
                 </div>
